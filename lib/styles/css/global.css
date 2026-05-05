@@ -1,0 +1,114 @@
+@custom-media --mobile (width <= 799.98px);
+@custom-media --desktop (width >= 800px);
+@custom-media --reduced-motion (prefers-reduced-motion: reduce);
+
+:root {
+  --color-transparent: transparent;
+  --color-white: #ffffff;
+  --color-light-100: #fafafa;
+  --color-light-200: #f5f5f5;
+  --color-dark-900: #101400;
+  --color-brand: #cbfe02;
+}
+
+@supports (color: oklch(0 0 0)) {
+  :root {
+    --color-white: oklch(1 0 0);
+    --color-light-100: oklch(0.985 0 0);
+    --color-light-200: oklch(0.97 0 0);
+    --color-dark-900: oklch(0.181 0.042 118.448);
+    --color-brand: oklch(0.928 0.228 123.142);
+  }
+}
+
+html {
+  --scrollbar-gutter: 0px;
+  scrollbar-gutter: stable; /* This is needed to prevent the scrollbar from jumping */
+
+  &.lenis-stopped {
+    --scrollbar-gutter: var(--scrollbar-width);
+  }
+}
+
+* {
+  scrollbar-width: thin;
+}
+
+html.overflow-hidden {
+  overflow: hidden;
+  touch-action: none;
+}
+
+body {
+  min-height: 100vh;
+  overscroll-behavior: none;
+  background-color: var(--color-light-100);
+  color: var(--color-dark-900);
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-sans);
+  font-feature-settings:
+    "ss01" 1,
+    "ss03" 1,
+    "ss05" 1,
+    "ss07" 1;
+}
+
+/* Selection styling */
+*::selection {
+  background-color: var(--color-brand);
+  color: var(--color-dark-900);
+}
+
+/* SVG icon colors */
+svg.icon {
+  path[fill],
+  rect[fill],
+  circle[fill] {
+    fill: currentColor;
+  }
+  path[stroke],
+  rect[stroke],
+  circle[stroke] {
+    stroke: currentColor;
+  }
+}
+
+/* Focus states */
+*:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--color-dark-900) 40%, transparent);
+  border-radius: mobile-vw(4px);
+
+  @media (--desktop) {
+    border-radius: desktop-vw(4px);
+  }
+}
+
+html.scrollbar-grabbing,
+img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+button {
+  cursor: pointer;
+  /* Fix vertical text centering by trimming font metric space */
+  text-box-trim: both;
+  text-box-edge: cap alphabetic;
+  user-select: none;
+}
+
+h1,
+h2 {
+  font-family: var(--font-serif);
+  font-feature-settings:
+    "ss01" 1,
+    "ss02" 1,
+    "ss03" 1;
+}
