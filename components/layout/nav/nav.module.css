@@ -1,0 +1,26 @@
+.aside {
+    width: columns(2);
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: desktop-vw(32);
+
+    & a {
+        width: min-content;
+        color: color-mix(in srgb, var(--color-dark-900) 40%, transparent);
+        transition: color 150ms ease-out;
+
+        &:hover,
+        &:focus {
+            color: var(--color-dark-900);
+        }
+    }
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: desktop-vw(4);
+}

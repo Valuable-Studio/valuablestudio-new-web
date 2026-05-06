@@ -1,0 +1,33 @@
+.wrapper {
+  position: relative;
+  aspect-ratio: 1;
+  width: mobile-vw(32);
+  
+  @media (--desktop) {
+    width: desktop-vw(32);
+  }
+}
+
+.wrapper [data-ball] {
+  width: 66.675%;
+  height: 66.675%;
+  background: var(--color-dark-900);
+  border-radius: calc(infinity * 1px);
+}
+
+.wrapper [data-blur] {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 66.675%;
+  height: 66.675%;
+  background: color-mix(in srgb, var(--color-dark-900) 20%, transparent);
+  border-radius: calc(infinity * 1px);
+  -webkit-backdrop-filter: blur(mobile-vw(4px));
+  backdrop-filter: blur(mobile-vw(4px));
+
+  @media (--desktop) {
+    -webkit-backdrop-filter: blur(desktop-vw(4px));
+    backdrop-filter: blur(desktop-vw(4px));
+  }
+}
