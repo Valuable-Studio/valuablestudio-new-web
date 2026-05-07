@@ -1,0 +1,11 @@
+.wrapper {
+    grid-column-start: 4;
+    grid-column-end: 10;
+    display: flex;
+    flex-direction: column;
+    gap: mobile-vw(48);
+    
+    @media (--desktop) {
+        gap: desktop-vw(72);
+    }
+}

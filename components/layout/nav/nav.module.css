@@ -1,11 +1,16 @@
-.aside {
-    width: columns(2);
-}
-
 .nav {
+    grid-column: span 2;
     display: flex;
     flex-direction: column;
     gap: desktop-vw(32);
+    margin-bottom: mobile-vw(48);
+    position: static;
+    
+    @media (--desktop) {
+        margin-bottom: unset;
+        position: fixed;
+        top: desktop-vw(120);
+    }
 
     & a {
         width: min-content;

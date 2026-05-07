@@ -16,22 +16,22 @@ const SECTIONS: Section[] = [
   { href: '/#contact', label: 'Contact' },
 ] as const
 
+// TODO: Track current visible section and highlight related nav link
+
 export default function Nav() {
   return (
-    <aside className={s.aside}>
-      <nav className={s.nav}>
-        <Link href="/" aria-label="Valuable Studio">
-          <Logo />
-        </Link>
+    <nav className={s.nav}>
+      <Link href="/" aria-label="Valuable Studio">
+        <Logo />
+      </Link>
 
-        <ul className={cn(s.list, 'desktop-only')}>
-          {SECTIONS.map((section) => (
-            <li key={section.label} className="text-caption">
-              <Link href={section.href}>{section.label}</Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </aside>
+      <ul className={cn(s.list, 'desktop-only')}>
+        {SECTIONS.map((section) => (
+          <li key={section.label} className="text-caption">
+            <Link href={section.href}>{section.label}</Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   )
 }

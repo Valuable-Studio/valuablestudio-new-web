@@ -37,6 +37,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   --scrollbar-gutter: 0px;
   scrollbar-gutter: stable; /* This is needed to prevent the scrollbar from jumping */
 
@@ -93,11 +94,12 @@ svg.icon {
 
 /* Focus states */
 *:focus-visible {
-  outline: 2px solid color-mix(in srgb, var(--color-dark-900) 40%, transparent);
-  border-radius: mobile-vw(4px);
+  outline: mobile-vw(1.5) solid color-mix(in srgb, var(--color-dark-900) 40%, transparent);
+  border-radius: mobile-vw(4);
 
   @media (--desktop) {
-    border-radius: desktop-vw(4px);
+    outline: desktop-vw(1.5) solid color-mix(in srgb, var(--color-dark-900) 40%, transparent);
+    border-radius: desktop-vw(4);
   }
 }
 
@@ -144,11 +146,15 @@ h2 {
   padding: mobile-vw(24) 0;
   margin-inline: auto;
   width: calc(100% - 2 * var(--safe));
-  display: grid;
-  grid-template-columns: repeat(var(--columns), 1fr);
-  column-gap: var(--gap);
-
+  
   @media (--desktop) {
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    column-gap: var(--gap);
     padding: desktop-vw(120) 0;
   }
+}
+
+em {
+  color: var(--color-dark-900)
 }

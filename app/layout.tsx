@@ -1,6 +1,8 @@
-import type { Metadata } from 'next'
+import Nav from '@/components/layout/nav'
 import '@/lib/styles/css/index.css'
 import { fontsVariable } from '@/lib/styles/fonts'
+import { ReactLenis } from 'lenis/react'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,7 +16,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="ltr" className={fontsVariable}>
-      <body>{children}</body>
+      <body>
+        <ReactLenis root>
+          <div className="layout-grid">
+            <Nav />
+            {children}
+          </div>
+        </ReactLenis>
+      </body>
     </html>
   )
 }

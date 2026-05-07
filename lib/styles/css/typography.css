@@ -1,6 +1,6 @@
 .text-h1 {
   font-family: var(--font-serif);
-  font-size: mobile-vw(28);
+  font-size: mobile-vw(24);
   line-height: 1.2;
   letter-spacing: -0.01em;
   font-weight: 400;
@@ -13,7 +13,7 @@
 
 .text-h2 {
   font-family: var(--font-serif);
-  font-size: mobile-vw(22);
+  font-size: mobile-vw(20);
   line-height: 1.2;
   letter-spacing: -0.01em;
   font-weight: 400;
