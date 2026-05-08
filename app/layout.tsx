@@ -2,7 +2,6 @@ import Footer from '@/components/layout/footer'
 import Nav from '@/components/layout/nav'
 import '@/lib/styles/css/index.css'
 import { fontsVariable } from '@/lib/styles/fonts'
-import { ReactLenis } from 'lenis/react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -18,13 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr" className={fontsVariable}>
       <body>
-        <ReactLenis root>
-          <div className="layout-grid">
-            <Nav />
-            {children}
-            <Footer />
-          </div>
-        </ReactLenis>
+        <div className="layout-grid">
+          <Nav />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   )

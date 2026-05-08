@@ -106,6 +106,7 @@
     width: mobile-vw(92);
     height: mobile-vw(33);
     margin-top: mobile-vw(8);
+    transform: rotate(-1deg);
     display: block;
 
     @media (--desktop) {

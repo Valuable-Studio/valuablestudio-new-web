@@ -63,8 +63,7 @@ components/
   ui/                 # Reusable primitives (Image, Link, Form, etc.)
   layout/             # Page chrome (Wrapper, Header, Footer, Theme, Lenis)
 lib/
-  hooks/              # Custom hooks
-  utils/              # Pure utilities (math, fetch, metadata, strings, animation, validation)
+  data/               # Data related files (works)
   styles/             # Design system, Tailwind config (CSS-based for v4)
 ```
 
@@ -115,8 +114,6 @@ export default function MyComponent({ variant = 'primary', className, ...props }
 
 | Package | Purpose |
 |---------|---------|
-| `lenis` | Smooth scroll (configured in layout) |
-| `motion/react` | Complex animations (Framer motion) |
 | `@base-ui/react` | Unstyled UI primitives |
 | `clsx` | Class name composition (aliased as `cn`) |
 

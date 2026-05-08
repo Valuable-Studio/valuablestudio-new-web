@@ -1,0 +1,37 @@
+@custom-media --mobile (width <= 799.98px);
+@custom-media --desktop (width >= 800px);
+@custom-media --reduced-motion (prefers-reduced-motion: reduce);
+
+:root {
+  --columns: 4;
+  --gap: mobile-vw(16);
+  --safe: mobile-vw(24);
+
+  --layout-width: calc(100vw - (2 * var(--safe)));
+  --column-width: calc((var(--layout-width) - (var(--columns) - 1) * var(--gap)) / var(--columns));
+
+  --color-transparent: transparent;
+  --color-white: #ffffff;
+  --color-light-100: #fafafa;
+  --color-light-200: #f5f5f5;
+  --color-dark-900: #101400;
+  --color-brand: #cbfe02;
+}
+
+@media (--desktop) {
+  :root {
+    --columns: 12;
+    --gap: desktop-vw(24);
+    --safe: desktop-vw(160);
+  }
+}
+
+@supports (color: oklch(0 0 0)) {
+  :root {
+    --color-white: oklch(1 0 0);
+    --color-light-100: oklch(0.985 0 0);
+    --color-light-200: oklch(0.97 0 0);
+    --color-dark-900: oklch(0.181 0.042 118.448);
+    --color-brand: oklch(0.928 0.228 123.142);
+  }
+}

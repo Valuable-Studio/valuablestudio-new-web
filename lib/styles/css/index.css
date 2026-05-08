@@ -1,4 +1,4 @@
-@import "lenis/dist/lenis.css";
+@import "./root.css";
 @import "./reset.css";
 @import "./global.css";
 @import "./typography.css";

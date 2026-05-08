@@ -2,7 +2,6 @@
 
 import Logo from '@/components/ui/logo'
 import cn from 'clsx'
-import { useLenis } from 'lenis/react'
 import Link from 'next/link'
 import { type MouseEvent, useEffect, useState } from 'react'
 import s from './nav.module.css'
@@ -24,13 +23,11 @@ const SECTIONS: Section[] = [
 
 export default function Nav() {
   const [activeId, setActiveId] = useState<string | null>(null)
-  const lenis = useLenis()
 
   const handleSectionClick = (
     event: MouseEvent<HTMLAnchorElement>,
     id: string
   ) => {
-    if (!lenis) return
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0)
       return
 
@@ -38,9 +35,11 @@ export default function Nav() {
     if (!target) return
 
     event.preventDefault()
-    lenis.scrollTo(target, {
-      offset: -window.innerHeight * SCROLL_OFFSET_RATIO,
-    })
+    const top =
+      target.getBoundingClientRect().top +
+      window.scrollY -
+      window.innerHeight * SCROLL_OFFSET_RATIO
+    window.scrollTo({ top, behavior: 'smooth' })
     window.history.pushState(null, '', `/#${id}`)
   }
 

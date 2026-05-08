@@ -3,7 +3,7 @@ import { functions } from './lib/styles/postcss-functions.mjs'
 export default {
   plugins: {
     '@csstools/postcss-global-data': {
-      files: ['./lib/styles/css/global.css'],
+      files: ['./lib/styles/css/root.css'],
     },
     'postcss-functions': { functions },
     'postcss-preset-env': {
