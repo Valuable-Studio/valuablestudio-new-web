@@ -3,17 +3,19 @@ import s from './section.module.css'
 
 interface SectionProps {
   title: string
-  isIntro?: boolean
   children: React.ReactNode
+  isIntro?: boolean
+  slug?: string
 }
 
 export default function Section({
   title,
-  isIntro = false,
   children,
+  isIntro = false,
+  slug,
 }: SectionProps) {
   return (
-    <section id={title.toLowerCase()} className={s.section}>
+    <section id={slug ? slug : title.toLowerCase()} className={s.section}>
       {!isIntro ? (
         <div className={s.titleContainer}>
           <span className="text-caption">{title}</span>

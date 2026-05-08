@@ -1,11 +1,12 @@
 .trigger {
-  width: max-content;
+  width: fit-content;
   display: inline-flex;
   align-items: baseline;
   gap: mobile-vw(6);
-
+  margin-right: mobile-vw(4);
   @media (--desktop) {
     gap: desktop-vw(6);
+    margin-right: desktop-vw(4);
   }
 }
 
@@ -80,7 +81,7 @@
   display: inline-flex;
   align-items: stretch;
   background: var(--color-light-100);
-  border-radius: mobile-vw(6);
+  border-radius: mobile-vw(4);
   box-shadow:
     0 0 0 mobile-vw(1)
     color-mix(in srgb, var(--color-dark-900) 12%, transparent),
@@ -88,7 +89,7 @@
     color-mix(in srgb, var(--color-dark-900) 10%, transparent);
 
   @media (--desktop) {
-    border-radius: desktop-vw(6);
+    border-radius: desktop-vw(4);
     box-shadow:
       0 0 0 desktop-vw(1)
       color-mix(in srgb, var(--color-dark-900) 12%, transparent),
@@ -123,18 +124,18 @@
 }
 
 .actionStart {
-  border-radius: mobile-vw(6) 0 0 mobile-vw(6);
+  border-radius: mobile-vw(4) 0 0 mobile-vw(4);
 
   @media (--desktop) {
-    border-radius: desktop-vw(6) 0 0 desktop-vw(6);
+    border-radius: desktop-vw(4) 0 0 desktop-vw(4);
   }
 }
 
 .actionEnd {
-  border-radius: 0 mobile-vw(6) mobile-vw(6) 0;
+  border-radius: 0 mobile-vw(4) mobile-vw(4) 0;
 
   @media (--desktop) {
-    border-radius: 0 desktop-vw(6) desktop-vw(6) 0;
+    border-radius: 0 desktop-vw(4) desktop-vw(4) 0;
   }
 }
 

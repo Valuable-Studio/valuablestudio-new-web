@@ -9,3 +9,108 @@
         gap: desktop-vw(72);
     }
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--gap);
+    row-gap: mobile-vw(2);
+    
+    @media (--desktop) {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: desktop-vw(2);
+    }
+
+    &:has(.work) {
+        row-gap: var(--gap);
+    }
+}
+
+.work {
+    display: grid;
+    place-content: center;
+    height: mobile-vw(48);
+    filter: saturate(0);
+    opacity: 0.4;
+    transition:
+        filter 150ms ease,
+        opacity 150ms ease;
+    
+    @media (--desktop) {
+        height: desktop-vw(72);
+    }
+
+    &:hover,
+    &:focus-visible {
+        filter: saturate(1);
+        opacity: 1;
+    }
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    
+    @media (--desktop) {
+        flex-direction: row;
+    }
+}
+
+.fitWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: mobile-vw(24);
+
+    @media (--desktop) {
+        gap: desktop-vw(24);
+    }
+
+    & .list {
+        display: flex;
+        flex-direction: column;
+        gap: mobile-vw(2);
+
+        @media (--desktop) {
+            gap: desktop-vw(2);
+        }
+
+        & li {
+            display: flex;
+            align-items: center;
+            gap: mobile-vw(8);
+
+            @media (--desktop) {
+                gap: desktop-vw(8);
+            }
+
+            &::before {
+                content: '';
+                flex-shrink: 0;
+                width: mobile-vw(6);
+                height: mobile-vw(6);
+                border-radius: 50%;
+                border: mobile-vw(0.75) solid color-mix(in srgb, var(--color-dark-900) 60%, transparent);
+
+                @media (--desktop) {
+                    width: desktop-vw(6);
+                    height: desktop-vw(6);
+                    border: desktop-vw(0.75) solid color-mix(in srgb, var(--color-dark-900) 60%, transparent);
+                }
+            }
+        }
+    }
+}
+
+.signature svg {
+    width: mobile-vw(92);
+    height: mobile-vw(33);
+    margin-top: mobile-vw(8);
+    display: block;
+
+    @media (--desktop) {
+        width: desktop-vw(92);
+        height: desktop-vw(33);
+        margin-top: desktop-vw(8);
+    }
+}

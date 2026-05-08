@@ -20,7 +20,7 @@
 }
 
 .divider {
-    width: 100%;
+    flex: 1;
     border: solid color-mix(in srgb, var(--color-dark-900) 12%, transparent);
     border-width: mobile-vw(0.5);
     

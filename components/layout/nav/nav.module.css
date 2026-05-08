@@ -18,7 +18,8 @@
         transition: color 150ms ease-out;
 
         &:hover,
-        &:focus {
+        &:focus-visible,
+        &[aria-current='location'] {
             color: var(--color-dark-900);
         }
     }

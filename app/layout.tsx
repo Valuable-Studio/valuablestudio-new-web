@@ -1,3 +1,4 @@
+import Footer from '@/components/layout/footer'
 import Nav from '@/components/layout/nav'
 import '@/lib/styles/css/index.css'
 import { fontsVariable } from '@/lib/styles/fonts'
@@ -21,6 +22,7 @@ export default function RootLayout({
           <div className="layout-grid">
             <Nav />
             {children}
+            <Footer />
           </div>
         </ReactLenis>
       </body>
