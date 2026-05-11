@@ -4,8 +4,33 @@ html {
   scrollbar-gutter: stable; /* This is needed to prevent the scrollbar from jumping */
 }
 
-* {
-  scrollbar-width: thin;
+/* Firefox uses standard properties; webkit ignores ::-webkit-scrollbar-* once scrollbar-width is set */
+@supports (-moz-appearance: none) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in srgb, var(--color-dark-900) 15%, transparent);
+  }
+}
+
+*::-webkit-scrollbar {
+  width: mobile-vw(13);
+  height: mobile-vw(13);
+
+  @media (--desktop) {
+    width: desktop-vw(13);
+    height: desktop-vw(13);
+  }
+}
+
+*::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  background-color: color-mix(in srgb, var(--color-dark-900) 15%, transparent);
+  border-radius: 9999px;
+  border: mobile-vw(4) solid rgba(0, 0, 0, 0);
+
+  @media (--desktop) {
+    border: desktop-vw(4) solid rgba(0, 0, 0, 0);
+  }
 }
 
 html.overflow-hidden {

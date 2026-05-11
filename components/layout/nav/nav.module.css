@@ -5,11 +5,12 @@
     gap: desktop-vw(32);
     margin-bottom: mobile-vw(48);
     position: static;
-    
+
     @media (--desktop) {
         margin-bottom: unset;
-        position: fixed;
+        position: sticky;
         top: desktop-vw(120);
+        align-self: start;
     }
 
     & a {

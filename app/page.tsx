@@ -1,4 +1,5 @@
 import Section from '@/components/layout/section'
+import WorkTrigger from '@/components/layout/work-drawer/work-trigger'
 import EmailLink from '@/components/ui/email-link'
 import { WORKS } from '@/lib/data/works'
 import s from './page.module.css'
@@ -71,15 +72,13 @@ function Problem() {
 }
 
 function Work() {
-  // TODO: Add bottom sheet component and url logic
-
   return (
     <Section title="Work">
       <div className={s.grid}>
         {WORKS.map((work) => (
-          <button key={work.name} type="button" className={s.work}>
+          <WorkTrigger key={work.name} work={work} className={s.work}>
             {work.logo}
-          </button>
+          </WorkTrigger>
         ))}
       </div>
     </Section>
@@ -125,9 +124,7 @@ function Offer() {
       </p>
       <div className={s.grid}>
         {CAPABILITIES.map((capability) => (
-          <p key={capability} className={s.capability}>
-            {capability}
-          </p>
+          <p key={capability}>{capability}</p>
         ))}
       </div>
     </Section>

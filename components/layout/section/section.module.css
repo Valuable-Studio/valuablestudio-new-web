@@ -39,7 +39,7 @@
         gap: desktop-vw(24);
     }
 
-    & h1, h2 {
+    & h1 {
         color: var(--color-dark-900);
         margin-bottom: unset;
         

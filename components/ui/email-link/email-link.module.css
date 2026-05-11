@@ -253,6 +253,12 @@
   top: 100%;
 }
 
+.popoverArrow[data-side="bottom"],
+.tooltipArrow[data-side="bottom"] {
+  bottom: 100%;
+  rotate: 180deg;
+}
+
 .popoverArrow svg,
 .tooltipArrow svg {
   display: block;
