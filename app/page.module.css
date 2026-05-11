@@ -22,7 +22,11 @@
     }
 
     &:has(.work) {
-        row-gap: var(--gap);
+        row-gap: mobile-vw(24);
+
+        @media (--desktop) {
+            row-gap: desktop-vw(24);
+        }
     }
 }
 
