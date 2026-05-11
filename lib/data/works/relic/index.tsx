@@ -15,7 +15,7 @@ export const relic: Work = {
     'Collectors track their collections across spreadsheets, photos, and memory. Relic needed to make that feel like something worth showing off.',
   services: ['Web design', 'Product design'],
   industry: ['Lifestyle', 'Collector tech'],
-  year: 2025,
+  year: 2026,
   images: [
     {
       src: relic01,

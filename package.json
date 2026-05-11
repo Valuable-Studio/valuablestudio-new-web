@@ -1,6 +1,7 @@
 {
-  "name": "valuablestudio-new-web",
-  "version": "0.1.0",
+  "name": "valuable-studio",
+  "description": "Design keeping up with your velocity. Embedded design partner for early-stage technical founders — product design, web design, async-first. $2,500/month.",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
