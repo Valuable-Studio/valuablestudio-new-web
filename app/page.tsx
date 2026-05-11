@@ -58,7 +58,7 @@ function Problem() {
       <p>
         What changes when someone thinks in both design and code is that the{' '}
         <br className="desktop-only" />
-        gap between “good idea” and “thing that can ship” basically disappears.
+        gap between “good idea” and “thing that can ship” basically disappears.{' '}
         <br className="desktop-only" />
         No designs that break in development. No explaining your stack to
         <br className="desktop-only" />
