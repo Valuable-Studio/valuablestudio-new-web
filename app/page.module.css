@@ -45,6 +45,14 @@
         filter: saturate(1);
         opacity: 1;
     }
+
+    & svg {
+        transform: scale(0.85);
+
+        @media (--desktop) {
+            transform: scale(1);
+        }
+    }
 }
 
 .flexbox {
