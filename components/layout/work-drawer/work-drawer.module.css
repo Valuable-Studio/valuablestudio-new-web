@@ -162,6 +162,8 @@
     background: var(--color-light-100);
 
     @media (--desktop) {
+        position: static;
+        top: unset;
         padding: desktop-vw(12) 0 desktop-vw(16);
     }
 

@@ -5,6 +5,7 @@ import '@/lib/styles/css/index.css'
 import { fontsVariable } from '@/lib/styles/fonts'
 import AppData from '@/package.json'
 import type { Metadata, Viewport } from 'next'
+import Script from 'next/script'
 
 const APP_NAME = AppData.name
 const APP_DEFAULT_TITLE =
@@ -86,6 +87,15 @@ export default function RootLayout({
             <Footer />
           </div>
         </WorkDrawerProvider>
+
+        {/* Plausible Analytics */}
+        <Script
+          src="https://plausible.io/js/pa-kwYtjswvvgetim_X-urKM.js"
+          strategy="afterInteractive"
+        />
+        <Script id="plausible-init" strategy="afterInteractive">
+          {`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()`}
+        </Script>
       </body>
     </html>
   )
