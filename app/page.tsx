@@ -62,7 +62,7 @@ function Problem() {
         <br className="desktop-only" />
         No designs that break in development. No explaining your stack to{' '}
         <br className="desktop-only" />
-        someone who’ll nod and ignore it.
+        someone who’ll nod and ignore it.{' '}
       </p>
       <p>
         <em>You just move.</em>
