@@ -120,6 +120,11 @@ function Offer() {
         don’t need it.
       </p>
       <p>
+        Before we start, a short call to align on priorities, walk through the
+        workflow, <br className="mobile-only" />
+        and agree on what to tackle first.
+      </p>
+      <p>
         <em>Capabilities</em>
       </p>
       <div className={s.grid}>
