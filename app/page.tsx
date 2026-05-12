@@ -43,7 +43,7 @@ function Problem() {
     <Section title="Problem">
       <p>
         You’ve probably tried patching it. A freelancer for the landing page, a
-        template for the product screens, a brief to an agency that came back
+        template for the product screens, a brief to an agency that came back{' '}
         <br className="desktop-only" />
         two weeks later and missed the point. You’ve probably tried AI too. It
         got <br className="desktop-only" />
@@ -51,7 +51,7 @@ function Problem() {
         judgment about your specific product, not pattern matching.
       </p>
       <p>
-        None of those options were close enough to what you’re actually building
+        None of those options were close enough to what you’re actually building{' '}
         <br className="desktop-only" />
         to get it right.
       </p>
@@ -60,7 +60,7 @@ function Problem() {
         <br className="desktop-only" />
         gap between “good idea” and “thing that can ship” basically disappears.{' '}
         <br className="desktop-only" />
-        No designs that break in development. No explaining your stack to
+        No designs that break in development. No explaining your stack to{' '}
         <br className="desktop-only" />
         someone who’ll nod and ignore it.
       </p>
@@ -102,7 +102,7 @@ function Offer() {
     <Section title="Offer">
       <p>
         The retainer exists because every product is different and fixed-scope
-        projects pretend otherwise. You get what you actually need, not what fit
+        projects pretend otherwise. You get what you actually need, not what fit{' '}
         <br className="desktop-only" />
         into a proposal written before we understood the problem.
       </p>
