@@ -4,7 +4,13 @@ import { WORKS, type Work } from '@/lib/data/works'
 import { Drawer } from '@base-ui/react/drawer'
 import cn from 'clsx'
 import Image from 'next/image'
-import { createContext, useCallback, useContext, useState } from 'react'
+import {
+  type CSSProperties,
+  createContext,
+  useCallback,
+  useContext,
+  useState,
+} from 'react'
 import s from './work-drawer.module.css'
 
 const FIRST_WORK = WORKS[0]
@@ -175,7 +181,14 @@ function WorkDetails({ work }: { work: Work }) {
       {work.images.map((image) => (
         <div key={image.alt} className={s.imageWrapper}>
           <div className={s.imageContainer}>
-            <div className={s.imageFrame}>
+            <div
+              className={s.imageFrame}
+              style={
+                {
+                  '--image-ar': image.src.width / image.src.height,
+                } as CSSProperties
+              }
+            >
               <Image
                 className={s.image}
                 src={image.src}

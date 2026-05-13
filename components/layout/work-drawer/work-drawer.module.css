@@ -339,8 +339,8 @@
 }
 
 .imageFrame {
-    width: fit-content;
-    max-width: 100%;
+    width: min(100%, calc(25dvh * var(--image-ar)));
+    aspect-ratio: var(--image-ar);
     background-color: var(--color-white);
     padding: mobile-vw(4);
     border-radius: mobile-vw(4);
@@ -351,6 +351,7 @@
         0 mobile-vw(4) mobile-vw(8) 0 color-mix(in srgb, var(--color-dark-900) 2%, transparent);
 
     @media (--desktop) {
+        width: min(100%, calc(70dvh * var(--image-ar)));
         padding: desktop-vw(4);
         border-radius: desktop-vw(4);
         border: desktop-vw(0.75) solid color-mix(in srgb, var(--color-dark-900) 12%, transparent);
@@ -363,16 +364,13 @@
 
 .image {
     display: block;
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 25dvh;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     border-radius: mobile-vw(2);
 
     @media (--desktop) {
         border-radius: desktop-vw(2);
-        max-height: 70dvh;
     }
 }
 
